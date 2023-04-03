@@ -89,7 +89,7 @@ local item_sjx2 = table.deepcopy(data.raw["item-with-entity-data"]["locomotive"]
 item_sjx2.name = "sj-x2000"
 item_sjx2.place_result = "sj-x2000"
 item_sjx2.icons = {
-    { icon = item_sjx2.icon, tint = { 238, 17, 34 } }
+    { icon = item_sjx2.icon, tint = { 50, 50, 50 } }
 }
 
 -- the entity that is placed
@@ -98,7 +98,7 @@ entity_sjx2.name = "sj-x2000"
 entity_sjx2.max_power = "900kW"
 entity_sjx2.reversing_power_modifier = 1.3888888889
 entity_sjx2.max_speed = 0.92592592666
-entity_sjx2.color = { 238, 17, 34 }
+entity_sjx2.color = { 100, 100, 100 }
 
 -- the recipe that gives you the item
 local recipe_sjx2 = table.deepcopy(data.raw["recipe"]["locomotive"])
@@ -117,13 +117,13 @@ local item_sjx2_cargo = table.deepcopy(data.raw["item-with-entity-data"]["cargo-
 item_sjx2_cargo.name = "sj-x2000-carriage"
 item_sjx2_cargo.place_result = "sj-x2000-cargo-carriage"
 item_sjx2_cargo.icons = {
-    { icon = item_sjx2_cargo.icon, tint = { 238, 17, 34 } }
+    { icon = item_sjx2_cargo.icon, tint = { 50, 50, 50 } }
 }
 
 -- the entity that gets placed
 local entity_sjx2_cargo = table.deepcopy(data.raw["cargo-wagon"]["cargo-wagon"])
 entity_sjx2_cargo.name = "sj-x2000-cargo-carriage"
-entity_sjx2_cargo.color = { 238, 17, 34 }
+entity_sjx2_cargo.color = { 100, 100, 100 }
 
 -- the recipe that gives you the item
 local recipe_sjx2_cargo = table.deepcopy(data.raw["recipe"]["cargo-wagon"])
@@ -142,13 +142,13 @@ local item_sjx2_fluid = table.deepcopy(data.raw["item-with-entity-data"]["fluid-
 item_sjx2_fluid.name = "sj-x2000-fluid-carriage"
 item_sjx2_fluid.place_result = "sj-x2000-fluid-carriage"
 item_sjx2_fluid.icons = {
-    { icon = item_sjx2_fluid.icon, tint = { 238, 17, 34 } }
+    { icon = item_sjx2_fluid.icon, tint = { 50, 50, 50 } }
 }
 
 -- the entity that gets placed
 local entity_sjx2_fluid = table.deepcopy(data.raw["fluid-wagon"]["fluid-wagon"])
 entity_sjx2_fluid.name = "sj-x2000-fluid-carriage"
-entity_sjx2_fluid.color = { 238, 17, 34 }
+entity_sjx2_fluid.color = { 100,100,100 }
 
 -- the recipe that gives you the item
 local recipe_sjx2_fluid = table.deepcopy(data.raw["recipe"]["fluid-wagon"])
