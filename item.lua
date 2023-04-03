@@ -27,7 +27,6 @@ entity_regina.color = { 238, 17, 34 }
 
 -- the recipe that gives you the item
 local recipe_regina = table.deepcopy(data.raw["recipe"]["locomotive"])
-recipe_regina.enabled = true
 recipe_regina.name = "x50-regina"
 recipe_regina.result = item_regina.name
 
@@ -54,7 +53,6 @@ entity_regina_cargo.color = { 238, 17, 34 }
 
 -- the recipe that gives you the item
 local recipe_regina_cargo = table.deepcopy(data.raw["recipe"]["cargo-wagon"])
-recipe_regina_cargo.enabled = true
 recipe_regina_cargo.name = "x50-regina-cargo-carriage"
 recipe_regina_cargo.result = item_regina_cargo.name
 
@@ -81,7 +79,6 @@ entity_regina_fluid.color = { 238, 17, 34 }
 
 -- the recipe that gives you the item
 local recipe_regina_fluid = table.deepcopy(data.raw["recipe"]["fluid-wagon"])
-recipe_regina_fluid.enabled = true
 recipe_regina_fluid.name = "x50-regina-fluid-carriage"
 recipe_regina_fluid.result = item_regina_fluid.name
 
@@ -114,7 +111,6 @@ entity_sjx2.color = { 100, 100, 100 }
 
 -- the recipe that gives you the item
 local recipe_sjx2 = table.deepcopy(data.raw["recipe"]["locomotive"])
-recipe_sjx2.enabled = true
 recipe_sjx2.name = "sj-x2000"
 recipe_sjx2.result = item_sjx2.name
 
@@ -141,7 +137,6 @@ entity_sjx2_cargo.color = { 100, 100, 100 }
 
 -- the recipe that gives you the item
 local recipe_sjx2_cargo = table.deepcopy(data.raw["recipe"]["cargo-wagon"])
-recipe_sjx2_cargo.enabled = true
 recipe_sjx2_cargo.name = "sj-x2000-cargo-carriage"
 recipe_sjx2_cargo.result = item_sjx2_cargo.name
 
@@ -168,7 +163,6 @@ entity_sjx2_fluid.color = { 100, 100, 100 }
 
 -- the recipe that gives you the item
 local recipe_sjx2_fluid = table.deepcopy(data.raw["recipe"]["fluid-wagon"])
-recipe_sjx2_fluid.enabled = true
 recipe_sjx2_fluid.name = "sj-x2000-fluid-carriage"
 recipe_sjx2_fluid.result = item_sjx2_fluid.name
 
