@@ -1,0 +1,10 @@
+{
+    "name": "viggos-train-collection",
+    "version": "0.1.0",
+    "title": "Viggo's Train Collection",
+    "author": "Viggo",
+    "factorio_version": "1.1",
+    "dependencies": ["base >= 1.1"],
+    "description": "This mod adds a variety of Swedish trains. The trains are mostly just reskins of the vanilla locomotive, only with minor stat changes."
+  }
+  
