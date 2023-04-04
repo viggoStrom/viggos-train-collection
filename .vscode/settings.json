@@ -1,5 +1,6 @@
 {
     "Lua.diagnostics.globals": [
-        "data"
+        "data",
+        "add_to_technology"
     ]
 }

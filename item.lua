@@ -24,10 +24,7 @@ entity_regina.max_power = "750kW"
 entity_regina.reversing_power_modifier = 0.9
 entity_regina.max_speed = 0.92592592666 --200kph
 entity_regina.color = { 238, 17, 34 }
-entity_regina.minable = {
-    mining_time = 0.5,
-    result = item_regina.name
-}
+entity_regina.minable.result = item_regina.name
 
 -- the recipe that gives you the item
 local recipe_regina = table.deepcopy(data.raw["recipe"]["locomotive"])
@@ -54,10 +51,7 @@ item_regina_cargo.icons = {
 local entity_regina_cargo = table.deepcopy(data.raw["cargo-wagon"]["cargo-wagon"])
 entity_regina_cargo.name = "x50-regina-cargo-carriage"
 entity_regina_cargo.color = { 238, 17, 34 }
-entity_regina_cargo.minable = {
-    mining_time = 0.5,
-    result = item_regina_cargo.name
-}
+entity_regina_cargo.minable.result = item_regina_cargo.name
 
 -- the recipe that gives you the item
 local recipe_regina_cargo = table.deepcopy(data.raw["recipe"]["cargo-wagon"])
@@ -84,10 +78,7 @@ item_regina_fluid.icons = {
 local entity_regina_fluid = table.deepcopy(data.raw["fluid-wagon"]["fluid-wagon"])
 entity_regina_fluid.name = "x50-regina-fluid-carriage"
 entity_regina_fluid.color = { 238, 17, 34 }
-entity_regina_fluid.minable = {
-    mining_time = 0.5,
-    result = item_regina_fluid.name
-}
+entity_regina_fluid.minable.result = item_regina_fluid.name
 
 -- the recipe that gives you the item
 local recipe_regina_fluid = table.deepcopy(data.raw["recipe"]["fluid-wagon"])
@@ -120,10 +111,7 @@ entity_sjx2.max_power = "900kW"
 entity_sjx2.reversing_power_modifier = 0.9
 entity_sjx2.max_speed = 1.3888888889 --300kph
 entity_sjx2.color = { 100, 100, 100 }
-entity_sjx2.minable = {
-    mining_time = 0.5,
-    result = item_sjx2.name
-}
+entity_sjx2.minable.result = item_sjx2.name
 
 -- the recipe that gives you the item
 local recipe_sjx2 = table.deepcopy(data.raw["recipe"]["locomotive"])
@@ -150,10 +138,7 @@ item_sjx2_cargo.icons = {
 local entity_sjx2_cargo = table.deepcopy(data.raw["cargo-wagon"]["cargo-wagon"])
 entity_sjx2_cargo.name = "sj-x2000-cargo-carriage"
 entity_sjx2_cargo.color = { 100, 100, 100 }
-entity_sjx2_cargo.minable = {
-    mining_time = 0.5,
-    result = item_sjx2_cargo.name
-}
+entity_sjx2_cargo.minable.result = item_sjx2_cargo.name
 
 -- the recipe that gives you the item
 local recipe_sjx2_cargo = table.deepcopy(data.raw["recipe"]["cargo-wagon"])
@@ -180,10 +165,7 @@ item_sjx2_fluid.icons = {
 local entity_sjx2_fluid = table.deepcopy(data.raw["fluid-wagon"]["fluid-wagon"])
 entity_sjx2_fluid.name = "sj-x2000-fluid-carriage"
 entity_sjx2_fluid.color = { 100, 100, 100 }
-entity_sjx2_fluid.minable = {
-    mining_time = 0.5,
-    result = item_sjx2_fluid.name
-}
+entity_sjx2_fluid.minable.result = item_sjx2_fluid.name
 
 -- the recipe that gives you the item
 local recipe_sjx2_fluid = table.deepcopy(data.raw["recipe"]["fluid-wagon"])
