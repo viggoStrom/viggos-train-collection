@@ -174,3 +174,14 @@ recipe_sjx2_fluid.result = item_sjx2_fluid.name
 
 add_to_technology(recipe_sjx2_fluid.name)
 data:extend { item_sjx2_fluid, entity_sjx2_fluid, recipe_sjx2_fluid }
+
+
+-- 
+-- modified big power pole so centered electric poles are possible in train track chunks
+-- 
+
+local big_power_pole = table.deepcopy(data.raw["electric-pole"]["big-electric-pole"])
+
+big_power_pole.maximum_wire_distance = 32
+
+data:extend{big_power_pole}
