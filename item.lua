@@ -22,7 +22,7 @@ local entity_regina = table.deepcopy(data.raw["locomotive"]["locomotive"])
 entity_regina.name = "x50-regina"
 entity_regina.max_power = "750kW"
 entity_regina.reversing_power_modifier = 0.9
-entity_regina.max_speed = 0.92592592666
+entity_regina.max_speed = 0.92592592666 --200kph
 entity_regina.color = { 238, 17, 34 }
 
 -- the recipe that gives you the item
@@ -105,8 +105,8 @@ item_sjx2.icons = {
 local entity_sjx2 = table.deepcopy(data.raw["locomotive"]["locomotive"])
 entity_sjx2.name = "sj-x2000"
 entity_sjx2.max_power = "900kW"
-entity_sjx2.reversing_power_modifier = 1.3888888889
-entity_sjx2.max_speed = 0.92592592666
+entity_sjx2.reversing_power_modifier = 0.9
+entity_sjx2.max_speed = 1.3888888889 --300kph
 entity_sjx2.color = { 100, 100, 100 }
 
 -- the recipe that gives you the item
