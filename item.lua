@@ -1,7 +1,7 @@
 ---@diagnostic disable: undefined-field
 
-function add_to_technology(recipe)
-    table.insert(data.raw["technology"]["railway"].effects, { type = "unlock-recipe", recipe = recipe })
+function add_to_technology(technology, recipe)
+    table.insert(data.raw["technology"][technology].effects, { type = "unlock-recipe", recipe = recipe })
 end
 
 --
@@ -31,7 +31,7 @@ local recipe_regina = table.deepcopy(data.raw["recipe"]["locomotive"])
 recipe_regina.name = "x50-regina"
 recipe_regina.result = item_regina.name
 
-add_to_technology(recipe_regina.name)
+add_to_technology("railway", recipe_regina.name)
 data:extend { item_regina, entity_regina, recipe_regina }
 
 --
@@ -58,7 +58,7 @@ local recipe_regina_cargo = table.deepcopy(data.raw["recipe"]["cargo-wagon"])
 recipe_regina_cargo.name = "x50-regina-cargo-carriage"
 recipe_regina_cargo.result = item_regina_cargo.name
 
-add_to_technology(recipe_regina_cargo.name)
+add_to_technology("railway", recipe_regina_cargo.name)
 data:extend { item_regina_cargo, entity_regina_cargo, recipe_regina_cargo }
 
 --
@@ -85,7 +85,7 @@ local recipe_regina_fluid = table.deepcopy(data.raw["recipe"]["fluid-wagon"])
 recipe_regina_fluid.name = "x50-regina-fluid-carriage"
 recipe_regina_fluid.result = item_regina_fluid.name
 
-add_to_technology(recipe_regina_fluid.name)
+add_to_technology("fluid-wagon", recipe_regina_fluid.name)
 data:extend { item_regina_fluid, entity_regina_fluid, recipe_regina_fluid }
 
 
@@ -118,7 +118,7 @@ local recipe_sjx2 = table.deepcopy(data.raw["recipe"]["locomotive"])
 recipe_sjx2.name = "sj-x2000"
 recipe_sjx2.result = item_sjx2.name
 
-add_to_technology(recipe_sjx2.name)
+add_to_technology("railway", recipe_sjx2.name)
 data:extend { item_sjx2, entity_sjx2, recipe_sjx2 }
 
 --
@@ -145,7 +145,7 @@ local recipe_sjx2_cargo = table.deepcopy(data.raw["recipe"]["cargo-wagon"])
 recipe_sjx2_cargo.name = "sj-x2000-cargo-carriage"
 recipe_sjx2_cargo.result = item_sjx2_cargo.name
 
-add_to_technology(recipe_sjx2_cargo.name)
+add_to_technology("railway", recipe_sjx2_cargo.name)
 data:extend { item_sjx2_cargo, entity_sjx2_cargo, recipe_sjx2_cargo }
 
 --
@@ -172,16 +172,45 @@ local recipe_sjx2_fluid = table.deepcopy(data.raw["recipe"]["fluid-wagon"])
 recipe_sjx2_fluid.name = "sj-x2000-fluid-carriage"
 recipe_sjx2_fluid.result = item_sjx2_fluid.name
 
-add_to_technology(recipe_sjx2_fluid.name)
+add_to_technology("fluid-wagon", recipe_sjx2_fluid.name)
 data:extend { item_sjx2_fluid, entity_sjx2_fluid, recipe_sjx2_fluid }
 
 
--- 
--- modified big power pole so centered electric poles are possible in train track chunks
--- 
+--
+-- modified big power pole range so train track chunks can have centered power poles
+--
 
 local big_power_pole = table.deepcopy(data.raw["electric-pole"]["big-electric-pole"])
 
 big_power_pole.maximum_wire_distance = 32
 
-data:extend{big_power_pole}
+data:extend { big_power_pole }
+
+--
+-- Track Inspection Utility Engine
+--
+
+-- the item you craft and hold and place
+local item_utility_engine = table.deepcopy(data.raw["item-with-entity-data"]["locomotive"])
+item_utility_engine.name = "utility-engine"
+item_utility_engine.place_result = "utility-engine"
+item_utility_engine.order = "sd"
+item_utility_engine.icons = {
+    { icon = item_utility_engine.icon, tint = { 189, 189, 0 } }
+}
+-- the entity that is placed
+local entity_utility_engine = table.deepcopy(data.raw["locomotive"]["locomotive"])
+entity_utility_engine.name = "utility-engine"
+entity_utility_engine.max_power = "1500kW"
+entity_utility_engine.reversing_power_modifier = 1
+entity_utility_engine.max_speed = 2.3148148148 --500kph
+entity_utility_engine.color = { 189, 189, 0 }
+entity_utility_engine.minable.result = item_utility_engine.name
+
+-- the recipe that gives you the item
+local recipe_utility_engine = table.deepcopy(data.raw["recipe"]["locomotive"])
+recipe_utility_engine.name = "utility-engine"
+recipe_utility_engine.result = item_utility_engine.name
+
+add_to_technology("railway", recipe_utility_engine.name)
+data:extend { item_utility_engine, entity_utility_engine, recipe_utility_engine }
